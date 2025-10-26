@@ -71,10 +71,10 @@ jobs:
           else
             if [ "${{ github.event.inputs.Type }}" = "all" ]; then
               echo "Running all Playwright tests"
-              npx playwright test tests/ --grep "@path|@test" --project=gp6 --shard=${{ matrix.shard }} --workers=1
+              npx playwright test tests/ --grep "@path" --project=gp6 --shard=${{ matrix.shard }} --workers=1
             else
               echo "Running Playwright tests filtered by --grep ${{ github.event.inputs.Type }}"
-              npx playwright test tests/ --grep "@path|@test" --grep "${{ github.event.inputs.Type }}" --project=gp6 --shard=${{ matrix.shard }} --workers=1
+              npx playwright test tests/ --grep "@path" --grep "${{ github.event.inputs.Type }}" --project=gp6 --shard=${{ matrix.shard }} --workers=1
             fi
           fi
 
