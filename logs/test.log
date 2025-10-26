@@ -1,0 +1,107 @@
+[2025-10-26T06:32:39.726Z] [INFO] 🚀 🚀 🚀 🚀 🚀 Starting test: @test 1. Verify Generate the RSA token
+[2025-10-26T06:32:39.731Z] [INFO] 🪟 Log in — open "Dashboard"
+[2025-10-26T06:32:42.413Z] [INFO] 🟢 Step Finished: Logged in — dashboard visible
+[2025-10-26T06:32:44.625Z] [ERROR] ❌ @test 1. Verify Generate the RSA token
+[2025-10-26T06:32:44.626Z] [INFO] 🏁 🏁 🏁 🏁 🏁 Finished test: @test 1. Verify Generate the RSA token
+[2025-10-26T06:32:45.590Z] [INFO] 🚀 🚀 🚀 🚀 🚀 Starting test: 2. Verify Generate the API token
+[2025-10-26T06:32:45.591Z] [INFO] 🪟 Log in — open "Dashboard"
+[2025-10-26T06:32:47.306Z] [INFO] 🟢 Step Finished: Logged in — dashboard visible
+[2025-10-26T06:32:49.320Z] [INFO] ⚠️ ⚠️ Session expired, performing UI login...
+[2025-10-26T06:32:49.321Z] [INFO] 🔄 Fill "Email" with g***i@konnectify.co
+[2025-10-26T06:32:49.364Z] [INFO] 🔄 Fill "Password" (hidden)
+[2025-10-26T06:32:49.387Z] [INFO] 🪟 Click "Login"
+[2025-10-26T06:32:49.445Z] [INFO] 🟢 Clicked Login button
+[2025-10-26T06:32:51.318Z] [INFO] 🟢 Step Finished: Logged in — dashboard visible
+[2025-10-26T06:32:51.751Z] [INFO] ℹ️ Begin: Generate API token
+[2025-10-26T06:32:51.751Z] [INFO] 🪟 Open "Tokens"
+[2025-10-26T06:32:51.751Z] [INFO] 🚀 🚀 🚀 🚀 🚀 Starting test: Step 1: Hover over Dashboard to reveal main menu
+[2025-10-26T06:32:51.809Z] [INFO] 🟢 Hovered over Dashboard — main menu visible
+[2025-10-26T06:32:51.809Z] [INFO] 🚀 🚀 🚀 🚀 🚀 Starting test: Step 2: Wait for main menu "Settings" to appear
+[2025-10-26T06:32:51.814Z] [INFO] 🟢 Main menu "Settings" is visible
+[2025-10-26T06:32:51.814Z] [INFO] 🖱️ Step 3: Click main menu "Settings"
+[2025-10-26T06:32:52.178Z] [INFO] 🟢 Main menu "Settings" expanded
+[2025-10-26T06:32:52.178Z] [INFO] 🚀 🚀 🚀 🚀 🚀 Starting test: Step 4: Wait for submenu "Tokens" to appear
+[2025-10-26T06:32:52.178Z] [INFO] 🖱️ Step 5: Click submenu "Tokens"
+[2025-10-26T06:32:52.238Z] [INFO] 🟢 Submenu "Tokens" opened successfully
+[2025-10-26T06:32:52.239Z] [INFO] 🟢 "Tokens" opened
+[2025-10-26T06:32:52.239Z] [INFO] ➕ Generate API token "Automate_API_Token"
+[2025-10-26T06:32:52.239Z] [INFO] ➕ Click "Add new token"
+[2025-10-26T06:32:53.118Z] [INFO] 🖱️ Open "Token Type" dropdown
+[2025-10-26T06:32:54.001Z] [INFO] 🖱️ Select "API" option
+[2025-10-26T06:32:54.276Z] [INFO] ⌨️ Enter API Token name
+[2025-10-26T06:32:54.291Z] [INFO] 🟢 Filled API Token name: Automate_API_Token
+[2025-10-26T06:32:54.292Z] [INFO] 🖱️ Open "Role Type" dropdown
+[2025-10-26T06:32:54.548Z] [INFO] 🟢 Clicked role type dropdown
+[2025-10-26T06:32:54.548Z] [INFO] ☑️ Select "Admin" role
+[2025-10-26T06:32:54.808Z] [INFO] 🟢 Clicked 'Admin' role
+[2025-10-26T06:32:54.808Z] [INFO] 🖱️ Click "Submit" button
+[2025-10-26T06:32:55.209Z] [INFO] 🟢 Clicked Submit button
+[2025-10-26T06:32:58.214Z] [INFO] 🖱️ Click "Close" button
+[2025-10-26T06:32:58.264Z] [INFO] 🟢 Clicked Close button
+[2025-10-26T06:32:58.265Z] [INFO] 🔎 Verify: Check for token creation or token limit reached
+[2025-10-26T06:32:58.278Z] [INFO] ⚠️ Token limit reached — can't create more than 3
+[2025-10-26T06:32:58.293Z] [INFO] 🟢 Token "Automate_API_Token" found
+[2025-10-26T06:32:58.293Z] [INFO] 🗑️ RSA token exists — deleting
+[2025-10-26T06:32:58.329Z] [INFO] 🟢 RSA token deleted
+[2025-10-26T06:32:58.329Z] [INFO] ➕ Click "Add new token"
+[2025-10-26T06:32:58.366Z] [INFO] 🖱️ Open "Token Type" dropdown
+[2025-10-26T06:32:58.633Z] [INFO] 🖱️ Select "API" option
+[2025-10-26T06:32:58.908Z] [INFO] ⌨️ Enter API Token name
+[2025-10-26T06:32:58.928Z] [INFO] 🟢 Filled API Token name: Automate_API_Token
+[2025-10-26T06:32:58.928Z] [INFO] 🖱️ Open "Role Type" dropdown
+[2025-10-26T06:32:59.186Z] [INFO] 🟢 Clicked role type dropdown
+[2025-10-26T06:32:59.186Z] [INFO] ☑️ Select "Admin" role
+[2025-10-26T06:32:59.454Z] [INFO] 🟢 Clicked 'Admin' role
+[2025-10-26T06:32:59.454Z] [INFO] 🖱️ Click "Submit" button
+[2025-10-26T06:32:59.874Z] [INFO] 🟢 Clicked Submit button
+[2025-10-26T06:33:02.885Z] [INFO] 🖱️ Click "Close" button
+[2025-10-26T06:33:02.952Z] [INFO] 🟢 Clicked Close button
+[2025-10-26T06:33:02.953Z] [INFO] ➕ Generate API token "Automate_API_Token"
+[2025-10-26T06:33:02.953Z] [INFO] ➕ Click "Add new token"
+[2025-10-26T06:33:03.213Z] [INFO] 🖱️ Open "Token Type" dropdown
+[2025-10-26T06:33:03.486Z] [INFO] 🖱️ Select "API" option
+[2025-10-26T06:33:03.776Z] [INFO] ⌨️ Enter API Token name
+[2025-10-26T06:33:03.788Z] [INFO] 🟢 Filled API Token name: Automate_API_Token
+[2025-10-26T06:33:03.788Z] [INFO] 🖱️ Open "Role Type" dropdown
+[2025-10-26T06:33:04.049Z] [INFO] 🟢 Clicked role type dropdown
+[2025-10-26T06:33:04.050Z] [INFO] ☑️ Select "Admin" role
+[2025-10-26T06:33:04.324Z] [INFO] 🟢 Clicked 'Admin' role
+[2025-10-26T06:33:04.324Z] [INFO] 🖱️ Click "Submit" button
+[2025-10-26T06:33:04.738Z] [INFO] 🟢 Clicked Submit button
+[2025-10-26T06:33:07.744Z] [INFO] 🖱️ Click "Close" button
+[2025-10-26T06:33:07.794Z] [INFO] 🟢 Clicked Close button
+[2025-10-26T06:33:07.794Z] [INFO] 🟢 Verified: API token generation
+[2025-10-26T06:33:07.796Z] [INFO] 🏆✅🏆✅ 2. Verify Generate the API token
+[2025-10-26T06:33:07.797Z] [INFO] 🏁 🏁 🏁 🏁 🏁 Finished test: 2. Verify Generate the API token
+[2025-10-26T06:33:09.096Z] [INFO] 🚀 🚀 🚀 🚀 🚀 Starting test: 2. Verify Update API token role or Create new token
+[2025-10-26T06:33:09.098Z] [INFO] 🪟 Log in — open "Dashboard"
+[2025-10-26T06:33:11.355Z] [INFO] 🟢 Step Finished: Logged in — dashboard visible
+[2025-10-26T06:33:13.369Z] [INFO] 🟢 Step Finished: ✅ Session is valid, already on dashboard
+[2025-10-26T06:33:13.371Z] [INFO] ℹ️ Begin: Update or create API token
+[2025-10-26T06:33:13.372Z] [INFO] 🪟 Open " Tokens"
+[2025-10-26T06:33:13.372Z] [INFO] 🚀 🚀 🚀 🚀 🚀 Starting test: Step 1: Hover over Dashboard to reveal main menu
+[2025-10-26T06:33:13.446Z] [INFO] 🟢 Hovered over Dashboard — main menu visible
+[2025-10-26T06:33:13.446Z] [INFO] 🚀 🚀 🚀 🚀 🚀 Starting test: Step 2: Wait for main menu "Settings" to appear
+[2025-10-26T06:33:13.451Z] [INFO] 🟢 Main menu "Settings" is visible
+[2025-10-26T06:33:13.452Z] [INFO] 🖱️ Step 3: Click main menu "Settings"
+[2025-10-26T06:33:13.893Z] [INFO] 🟢 Main menu "Settings" expanded
+[2025-10-26T06:33:13.893Z] [INFO] 🚀 🚀 🚀 🚀 🚀 Starting test: Step 4: Wait for submenu "Tokens" to appear
+[2025-10-26T06:33:13.893Z] [INFO] 🖱️ Step 5: Click submenu "Tokens"
+[2025-10-26T06:33:13.952Z] [INFO] 🟢 Submenu "Tokens" opened successfully
+[2025-10-26T06:33:13.953Z] [INFO] 🟢 "Tokens" opened
+[2025-10-26T06:33:13.953Z] [INFO] 🔄 Update or create API token "Automate_API_Token"
+[2025-10-26T06:33:15.265Z] [INFO] 🟢 Token "Automate_API_Token" found
+[2025-10-26T06:33:15.265Z] [INFO] 🔄 RSA token exists — update
+[2025-10-26T06:33:15.345Z] [INFO] 🪟 Click "Edit"
+[2025-10-26T06:33:15.345Z] [INFO] ☑️ Update the role
+[2025-10-26T06:33:15.352Z] [INFO] 🖱️ Open "Role Type" dropdown
+[2025-10-26T06:33:15.634Z] [INFO] 🟢 Clicked role type dropdown
+[2025-10-26T06:33:15.635Z] [INFO] 🔄 Current role is "Admin" — switch to "User"
+[2025-10-26T06:33:15.913Z] [INFO] 🟢 Role updated to User
+[2025-10-26T06:33:16.208Z] [INFO] 💾 Click "Update"
+[2025-10-26T06:33:16.209Z] [INFO] 🔍 Assert token status "updated"
+[2025-10-26T06:33:16.209Z] [INFO] 🟢 Verified: API token updated/created
+[2025-10-26T06:33:16.211Z] [INFO] 🏆✅🏆✅ 2. Verify Update API token role or Create new token
+[2025-10-26T06:33:16.212Z] [INFO] 🏁 🏁 🏁 🏁 🏁 Finished test: 2. Verify Update API token role or Create new token
+[2025-10-26T06:33:16.721Z] [INFO] 🚀 🚀 🚀 🚀 🚀 Starting test: 3. Verify Delete/Create the API token
+[2025-10-26T06:33:16.721Z] [INFO] 🪟 Log in — open "Dashboard"

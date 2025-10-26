@@ -1,27 +1,87 @@
 name: Playwright Tests
+
 on:
+  workflow_dispatch:
+    inputs:
+      Type:
+        description: "Target Test (e.g., regression, smoke, all)"
+        required: false
+        default: all
+        type: choice
+        options:
+          - all
+          - regression
+          - smoke
+
+  repository_dispatch:
+    types: [run-playwright-tests]
+
   push:
-    branches: [ main, master ]
+    branches: [main, master]
+
   pull_request:
-    branches: [ main, master ]
+    branches: [main, master]
+
 jobs:
-  test:
-    timeout-minutes: 60
+  e2e-tests:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1/3, 2/3, 3/3] # split into 3 parallel jobs
+        # you can increase to [1/4, 2/4, 3/4, 4/4] if you want more splits
+
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-    - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
-    - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js (with npm cache)
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+          cache-dependency-path: '**/package-lock.json'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: ♻️ Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+
+      - name: 📥 Install Playwright Browsers
+        run: |
+          if [ ! -d ~/.cache/ms-playwright ]; then
+            npx playwright install --with-deps
+          else
+            echo "✅ Playwright browsers restored from cache"
+          fi
+
+      - name: ▶️ Run Playwright Tests (Shard ${{ matrix.shard }})
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "Running only smoke & regression tests for PR"
+            npx playwright test tests/ --grep "@path|@test" --project=gp6 --shard=${{ matrix.shard }} --workers=1
+          else
+            if [ "${{ github.event.inputs.Type }}" = "all" ]; then
+              echo "Running all Playwright tests"
+              npx playwright test tests/ --grep "@path|@test" --project=gp6 --shard=${{ matrix.shard }} --workers=1
+            else
+              echo "Running Playwright tests filtered by --grep ${{ github.event.inputs.Type }}"
+              npx playwright test tests/ --grep "@path|@test" --grep "${{ github.event.inputs.Type }}" --project=gp6 --shard=${{ matrix.shard }} --workers=1
+            fi
+          fi
+
+      - name: 📤 Upload Playwright Report (if failed)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-shard-1
+          path: playwright-report/
+          retention-days: 30
