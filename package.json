@@ -1,0 +1,22 @@
+{
+  "name": "automation_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/googlepriya/Automation_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/googlepriya/Automation_Project/issues"
+  },
+  "homepage": "https://github.com/googlepriya/Automation_Project#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.1"
+  }
+}
