@@ -67,7 +67,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             echo "Running only smoke & regression tests for PR"
-            npx playwright test tests/ --grep "@path|@test" --project=gp6 --shard=${{ matrix.shard }} --workers=1
+            npx playwright test tests/ --grep "@path" --project=gp6 --shard=${{ matrix.shard }} --workers=1
           else
             if [ "${{ github.event.inputs.Type }}" = "all" ]; then
               echo "Running all Playwright tests"
